@@ -1,1 +1,301 @@
-the changes
+VCS - 	Allow the history of collection of files 
+	Create Version 
+	Version-snapshot-what are the files, look, comtents
+	Switch client server single  
+	repository - local, centralized, distribued
+
+cent - c
+dis each local repo 
+
+snapshor
+
+CVS
+	google code
+	backup and sharefile
+SVN 
+	Widest adoption	open soure project-large projects
+	Google code
+Mercurial
+	lonle large project
+solo->cent->distrbution
+
+Monotone
+	integrity
+	vaidation and auth
+Git
+	shanshot
+	-other tools-file based
+	-commit, save the changes
+	-series of of snapshot
+	-refrence of snapshot -> database
+
+	local operation
+	-oprn local meachine
+	
+	Integrity 
+	-checksummed
+	40 digit hexa charactor -> SHA-1 algorithem
+	impossibel to 
+
+
+
+
+Repository -- F1,f2,f3
+trunk
+git tag v1.0 -m "Version 1"
+git 
+Tags 
+Branches
+working copy
+commit changes
+
+
+
+Git Bash
+\\10.236.65.12\training$\Git
+-----------------------
+pwd
+cd..
+cd ..
+cd gitsamples
+cd mkdir gitsample
+cd gitsample
+git init
+touch f1 (create file)
+li (list)
+vi f1
+git status
+git add filebname 
+git status
+git commit -m "Save change"
+git status
+
+git config --global --list
+git cinfig --global user.name "Git Auther"
+git config --global --list
+
+
+Steps to follow
+git init -- create repository
+pwd 
+cd..
+cd..
+mkdir gitsample
+cd gitsample
+touch f1  -- Create file
+vi file1 --Edit File
+git status
+git add . or git add *
+git status
+git commit -m "some comments"
+git status
+git log
+
+git config --global --list
+
+vi f1
+i INSERT
+
+ls --> list the file
+git diff --> compare the two files
+git log --> check the log 
+Esc --> escape from come changes
+:wq --> save and quit
+:q! --> without quit
+git cinfig --global user.name "Git Auther"
+git config --global --list
+
+git log --oneline
+git shortlog
+
+
+v1 file4
+git status -- untracked file
+git clean -f  --> to remove files
+git clean -f f1
+git status
+
+
+Staging back to working directory
+--------------------------------------
+pwd --> present working directory 
+li --> we can show list of files
+vi file4
+git status -- this show untracked files
+git add.
+git status changes has to be commited
+git reset file4 
+git status untracked files 
+
+git dir -> staging area
+=========================
+git add .
+git status changes has to be commited
+git commit -m "save"
+git reset --soft HEAD^1
+git reset --hard HEAD^1
+
+git status --> changes has to be commited
+
+
+git add .
+git status 
+git commit  - m "commants"
+git reset --mixed HEAD^1
+git status 
+git add . 
+git commit -m "save comm.."
+git reset --hard HEAD^1
+git status  --> nothing to be commited (files may not exost it takes to the state)
+
+
+Branches
+-----------------
+git branch --> list out the branches
+
+git branch karthikBranch -->  create branch
+git branch testing branch 
+
+git checkout karthikBranch
+git branch -m kartikBranch karthikNewBranch -->rename branches
+git branch -d test delete a branch
+git branch -b release --> create a new branch -> release, checkout
+git branch -a --> lists all branch incl remote
+git branch -r --> list remote branches
+
+
+git checkout master
+li --> f1, f2,f3
+cat f3 Hiiiiiii
+git checkout karthikBranch
+ls --> f1, f2, f3
+cat f3 Hiii --> nothing changes happent
+vi f3 --> change the content 
+git add .
+git commit -m "Save content by develop"
+git checkout master
+cat f3 Hiii
+git merge karthikBranch  [merge or rebase]
+cat f3 we an the changes
+
+git tag  --> v1.0
+git  show v1.0 to view the tabg info
+git tag list out the avail tags
+vi file1 edited
+git add .
+git commit -m "new commit"
+git show v1.0 last commit
+git tag v1.1
+git show v1.1 "new changes"
+git tag v1.2 -m "version2"
+
+Cherry [merge the ]
+--------
+git checkout master
+ls f1 f2 f3
+cat f1 Hello Hi
+git checkout -b dev
+cat f1 hello hi
+vi f1 do changes
+git add . 
+git commit -m "change1 by dev"
+vi f1 do changes
+git  add . 
+git commit -m "changes2 by dev"
+git log --oneline copy commit id of changes 2
+git checkout master
+
+git cherry-pick <Commit id from 7dig number>
+cat f1
+git cherry-pick --abort
+
+Stash  save the changes temp 
+=====
+vi  f1 -- edit files
+git status   not tracked
+git stash   save the curent state
+git status   nothing to be commited
+git stash pop   applying the current state
+git status    not tracked
+git stash list
+gir stash pop stash@{1} 
+
+
+
+move to the masterbranch from child branch
+------------------------------------------
+
+
+git log
+git checkout master
+git log
+git merge childbranch
+
+
+
+
+Github  [https://github.com]
+--------  
+create repo
+create a file -commit
+update the file -commit
+create branch develop
+update the file - commit
+switch master
+check the contents of the file 
+pull request - merge the changes that are done in develop
+
+
+
+step1: copy the link from the getUrl
+step2: cd.. [set the path]
+step3: git clone << copied link >>
+step4: cd Repo[project folder]
+step5: ls 
+step6: cat fl
+step7: vi fl
+step8: git add .
+step9: git commit -m "local change and locally commited"
+step10: git push -u (upsters) origin master
+
+then check the changes in git repo 
+
+step11: Parallel process
+step12: git pull 
+step13: vi filename
+step14: git add .
+step15: git commit -m "local changes"
+step16: git push -u origin master
+
+git config --global alise.x "log -1 HEAD"
+git X
+
+git Bisect
+----------------
+create a file 5 line 5 commmits 3-error
+git log  copy the commit id of 2nd line 
+git bisect start 
+git bisect bad
+git bisect goo <Commit id>
+cat f1
+git bisect bad
+git bisect good
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
