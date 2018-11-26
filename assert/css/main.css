@@ -1,0 +1,172 @@
+/*********/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.floatLeft {
+  float: left; }
+
+.floatRight {
+  float: right; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+main,
+header,
+footer {
+  width: 100%;
+  float: left; }
+  @media (min-width: 320px) and (max-width: 420px) {
+    main .sw-container,
+    header .sw-container,
+    footer .sw-container {
+      padding: 10px 20px; } }
+  @media (min-width: 421px) and (max-width: 720px) {
+    main .sw-container,
+    header .sw-container,
+    footer .sw-container {
+      padding: 10px 30px; } }
+  @media screen and (min-width: 721px) {
+    main .sw-container,
+    header .sw-container,
+    footer .sw-container {
+      padding: 10px 30px; } }
+
+body {
+  float: left; }
+
+main {
+  background-image: url(../images/Steak-hero-desktop-1800x650.jpg);
+  background-size: 130%;
+  background-repeat: no-repeat;
+  min-height: 575px;
+  background-position: 75% 0; }
+
+.sw-language-content .sw-language {
+  border: 1px solid red; }
+  .sw-language-content .sw-language .sw-lang-btn {
+    cursor: pointer;
+    font-family: sans-serif;
+    line-height: normal;
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+    background: transparent;
+    border: 0; }
+  .sw-language-content .sw-language .sw-language-dropdown {
+    background-color: #f4f5f4;
+    display: none;
+    padding: 15px;
+    position: absolute;
+    top: 10px;
+    z-index: 2; }
+    .sw-language-content .sw-language .sw-language-dropdown li.sw-dropdown-item {
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
+      padding-left: 27px;
+      position: relative;
+      white-space: nowrap;
+      list-style-type: none; }
+      .sw-language-content .sw-language .sw-language-dropdown li.sw-dropdown-item .isSelected {
+        position: relative; }
+      .sw-language-content .sw-language .sw-language-dropdown li.sw-dropdown-item a {
+        color: #777777;
+        display: block;
+        padding: 13px 0 10px;
+        text-decoration: none; }
+        .sw-language-content .sw-language .sw-language-dropdown li.sw-dropdown-item a:hover {
+          color: #006230; }
+  .sw-language-content .sw-language.isopen .sw-language-dropdown {
+    display: block; }
+
+.sw-language-content .sw-contrast-toggle {
+  color: #777777;
+  display: inline-block;
+  font-weight: 700;
+  padding: 0 0 0 15px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  background: transparent;
+  border: 0; }
+  .sw-language-content .sw-contrast-toggle .sw-contrast_button:before {
+    background-color: #006230;
+    border-radius: 50%;
+    content: '';
+    display: block;
+    height: 11px;
+    left: 3px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: .3s;
+    transition: .3s;
+    width: 11px; }
+
+#toggleSlide {
+  float: left;
+  border: 1px solid red;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background: yellow;
+  padding: 5px; }
+  #toggleSlide .toggleSlide {
+    width: 20px;
+    height: 20px;
+    background: #f3f31b; }
+
+header > .sw-eyebrow, header > .sw-header {
+  width: 100%; }
+
+header > .sw-eyebrow {
+  background-color: #f4f5f4;
+  float: left;
+  padding-top: 5px;
+  padding-bottom: 5px; }
+
+header > .sw-header {
+  height: 48px;
+  background-color: #ffffff; }
+  header > .sw-header > .sw-logo svg {
+    height: 48px;
+    width: 239px; }
+  header > .sw-header ul.sw-nav-list li {
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: 'Roboto'; }
+    header > .sw-header ul.sw-nav-list li a {
+      display: block;
+      color: #006230;
+      cursor: pointer;
+      line-height: normal;
+      list-style-type: none;
+      text-decoration: none;
+      text-align: center;
+      padding: 0 10px; }
+      header > .sw-header ul.sw-nav-list li a span {
+        display: block;
+        width: 1px;
+        margin: auto;
+        -webkit-transition: width .2s ease-in-out;
+        transition: width .2s ease-in-out;
+        -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transform: scaleX(0); }
+        header > .sw-header ul.sw-nav-list li a span .active {
+          border-bottom: 1px solid #006230; }
+      header > .sw-header ul.sw-nav-list li a:hover {
+        color: #006230; }
+        header > .sw-header ul.sw-nav-list li a:hover span {
+          border-bottom: 1px solid #006230;
+          width: 100%;
+          -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+          transform: scaleX(1); }

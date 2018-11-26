@@ -1,0 +1,134 @@
+html,
+body{ margin:0; padding:0;}
+main,
+header,
+footer{
+   width:$width100;
+   float: left;
+   @include mobile {
+        .sw-container {
+            padding: 10px 20px;
+        }
+    }
+    @include tablet {
+        .sw-container {
+            padding: 10px 30px;
+        }
+    }
+    @include desktop {
+        .sw-container {
+            padding: 10px 30px;
+        }
+    }
+
+}
+body{
+    float: left;
+}
+main{
+    background-image: url(../images/Steak-hero-desktop-1800x650.jpg);
+    background-size: 130%;
+    background-repeat: no-repeat;
+    min-height: 575px;
+    background-position: 75% 0;
+}
+
+.sw-language-content{
+    .sw-language{
+        border:1px solid red;
+        
+        .sw-lang-btn{
+            cursor: pointer;
+            font-family: sans-serif;
+            line-height: normal;
+            font-size: 100%;
+            margin: 0;
+            vertical-align: baseline;
+            background: transparent;
+            border: 0;
+        }
+        .sw-language-dropdown{
+            background-color: #f4f5f4;
+            display: none;
+            padding: 15px;
+            position: absolute;
+            top: 10px;
+            z-index: 2;
+            li.sw-dropdown-item{
+                border-top: 1px solid rgba(0, 0, 0, 0.3);
+                padding-left: 27px;
+                position: relative;
+                white-space: nowrap;
+                list-style-type: none;
+                .isSelected{
+                    position: relative;
+                    &:before {
+                        //bor border:
+                    }
+                }
+                a{                    
+                    color: #777777;
+                    display: block;
+                    padding: 13px 0 10px;
+                    text-decoration: none;
+                    &:hover {
+                        color: #006230; 
+                    }
+                }
+            }
+        }
+        &.isopen{
+            .sw-language-dropdown{
+                display: block;
+            }
+        }
+    }
+    .sw-contrast-toggle{
+        color: #777777;
+        display: inline-block;
+        font-weight: 700;
+        padding: 0 0 0 15px;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        vertical-align: top;
+        background: transparent;
+        border: 0;
+        .sw-contrast_button{
+            &:before{
+                background-color: #006230;
+                border-radius: 50%;
+                content: '';
+                display: block;
+                height: 11px;
+                left: 3px;
+                position: absolute;
+                top: 50%;
+                -webkit-transform: translateY(-50%);
+                -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
+                -webkit-transition: .3s;
+                transition: .3s;
+                width: 11px;
+            }
+        }
+        
+    }
+}
+
+#toggleSlide{
+    float: left;
+    border: 1px solid red;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: yellow;
+    padding: 5px;
+    .toggleSlide{
+        width:20px;
+        height: 20px;
+        background: rgb(243, 243, 27);
+    }
+}
+
